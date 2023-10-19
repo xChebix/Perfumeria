@@ -23,8 +23,8 @@ const Reviews = () => {
           <div key={index} className="col-md-4 container text-center mt-3">
             <div className="card mb-4">
               <div className="card-body">
-                <h4>User: Anonymous</h4>
-                <p className="card-text">Review: {review.review}</p>
+                <h4>Review: {review.review}</h4>
+                <p className="card-text">User: Anonymous</p>
               </div>
             </div>
           </div>

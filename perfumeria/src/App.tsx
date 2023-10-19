@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Reviews from "./pages/Reviews";
-
+import Login from "./pages/LogIn"
 function App() {
   return (
     <Fragment>
@@ -22,10 +22,12 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/reviews" element={<Reviews />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </div>
         </div>
       </Router>
+      
      
     </Fragment>
   );

@@ -56,7 +56,18 @@ app.post('/add-review', (req, res) => {
       return res.json(data);
     });
   });
-
+app.post('/login', (req,res) =>{
+    const query = "select * from user where username = ? and password = ?";
+    
+    db.query(query, [req.body.username, req.body.password], (err,data) =>{
+        if(err) return res.json("Login Failed");
+        if(data.length > 0) {
+            return res.json("Login Successfully")
+        } else{
+            return res.json("No record")
+        }
+    })
+}) 
 app.listen(8081,()=> {
     console.log("Listening");
 })
